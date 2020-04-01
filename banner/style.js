@@ -22,14 +22,14 @@ $(function(){
 
     var $banner=$(html);
     $('.box').append($banner)
-    var timer,
+    var timer,time=2000
         $slide=$banner.find('.slide'),
         $li=$banner.find('li'),
         index=0,
         width=$('.slide').width(),
         len=$slide.length-2;
 
-
+        $li.eq(index).attr('class','active');
     function change(){
         $('#slider').animate({left:'-='+width},500,function(){
             index++;
@@ -80,5 +80,5 @@ $(function(){
     })
     timer=setInterval(function(){
         change()
-    },2000)
+    },time)
 })
