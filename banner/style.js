@@ -29,7 +29,7 @@ $(function(){
         width=$('.slide').width(),
         len=$slide.length-2;
 
-        $li.eq(index).attr('class','active');
+    $li.eq(index).attr('class','active');
     function change(){
         $('#slider').animate({left:'-='+width},500,function(){
             index++;
